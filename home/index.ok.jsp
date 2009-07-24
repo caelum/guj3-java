@@ -52,15 +52,27 @@ $().ready(function() {
 		  		</c:forEach>
 			  </ul>
 			  
-			  <p align="center">
-				<!-- OAS AD 'Right' begin -->
-				<SCRIPT LANGUAGE="JavaScript">
-				<!--
-				OAS_AD('Right');
-				//-->
-				</SCRIPT>
-				<!-- OAS AD 'Right' end -->
-			</p>
+			<div style="margin-top: 10px; margin-left: 5px;">
+				<div style="float: left; width: 20px;">
+					<img src="/guj/images/guj/book_open.gif" style="padding-top: 5px;"/>
+					<img src="/guj/images/guj/book_open.gif" style="padding-top: 41px;"/>
+					<img src="/guj/images/guj/book_open.gif" style="padding-top: 41px;"/>
+					<img src="/guj/images/guj/book_open.gif" style="padding-top: 41px;"/>
+				</div>
+		  
+		  		<div style="float: left;">
+					<script type="text/javascript"><!--
+						google_ad_client = "pub-7098584793170190";
+						/* GUJ Quadrado Home */
+						google_ad_slot = "3282687954";
+						google_ad_width = 300;
+						google_ad_height = 250;
+						//-->
+						</script> 
+						<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> 
+					</script> 
+				</div>
+			</div>
 		</div>
 		
 		<b class="spiffy"><b class="spiffy5"></b><b class="spiffy4"></b><b class="spiffy3"></b><b class="spiffy2"><b></b></b><b class="spiffy1"><b></b></b></b>
@@ -72,9 +84,7 @@ $().ready(function() {
 			  <h2><a href="<c:url value="/article.list.logic"/>">Artigos</a></h2>
 			 
 			 <c:forEach items="${tags}" var="tag">
-			 
 			 	<a href="${tag.link}" class="tag_${tag.weightInt}">${tag.name}</a>
-			 
 			 </c:forEach>
 			 
 			 <%-- <ul>

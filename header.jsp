@@ -14,47 +14,6 @@
 <title>GUJ - ${title}</title>
 <link href="<c:url value="/stylesheets/guj3.css?20090222"/>" media="screen" rel="stylesheet" type="text/css" />
 
-<!-- OAS SETUP begin -->
-<SCRIPT LANGUAGE=JavaScript>
-<!--
-//configuration
-OAS_url = 'http://media.realmedia.com.br/RealMedia/ads/';
-OAS_listpos = 'Top,Right,x01,x04';
-OAS_query = '';
-OAS_sitepage = '${rmSection}';
-//end of configuration
-OAS_version = 10;
-OAS_rn = '001234567890'; OAS_rns = '1234567890';
-OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
-function OAS_NORMAL(pos) {
-	document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" TARGET=_top>');
-	document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" BORDER=0></A>');
-}
-//-->
-</SCRIPT>
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-OAS_version = 11;
-if (navigator.userAgent.indexOf('Mozilla/3') != -1)
-OAS_version = 10;
-if (OAS_version >= 11)
-document.write('<SCR'+ 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query + '"></SC'+'RIPT>');
-//-->
-</SCRIPT><SCRIPT LANGUAGE="JavaScript">
-<!-- 
-document.write('')
-function OAS_AD(pos) {
-if (OAS_version >= 11)
-	OAS_RICH(pos);
-else
-	OAS_NORMAL(pos);
-}
-//-->
-</SCRIPT>
-<!-- OAS SETUP end -->
-<!--[if IE]>
-<link href="<c:url value="/stylesheets/guj3-ie.css?20090222"/>" media="screen" rel="stylesheet" type="text/css" />
-<![endif]-->
 <script type="text/javascript" src="<c:url value="/javascripts/jquery-1.3.1.min.js?20090222"/>"></script>
 <script type="text/javascript" src="<c:url value="/javascripts/jquery.dimensions.min.js?20090222"/>"></script>
 <script type="text/javascript">
