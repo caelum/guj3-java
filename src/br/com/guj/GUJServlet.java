@@ -26,35 +26,29 @@ public class GUJServlet extends VRaptorServlet {
 		super.init(config);
 		Config.loadConfigs();
 
-		this.forumAgregator = new Agregator("forum.refresh.interval",
-				"forum.items", "forum.url");
-		this.newsAgregator = new Agregator("news.refresh.interval",
-				"news.items", "news.url");
-		this.infoqAgregator = new Agregator("infoq.refresh.interval",
-				"infoq.items", "infoq.url");
+		this.forumAgregator = new Agregator("forum.refresh.interval", "forum.items", "forum.url");
+		this.newsAgregator = new Agregator("news.refresh.interval", "news.items", "news.url");
+		this.infoqAgregator = new Agregator("infoq.refresh.interval", "infoq.items", "infoq.url");
 
 		JobsAgregator.start();
 	}
 
 	/**
 	 * @see org.vraptor.VRaptorServlet#service(javax.servlet.http.HttpServletRequest,
-	 *      javax.servlet.http.HttpServletResponse)
+	 *     javax.servlet.http.HttpServletResponse)
 	 */
 	@Override
-	protected void service(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("infoq", this.infoqAgregator.getItems());
 		request.setAttribute("news", this.newsAgregator.getItems());
 		request.setAttribute("forum", this.forumAgregator.getItems());
 		request.setAttribute("jobs", JobsAgregator.getItems());
 
-		boolean isLogged = "1".equals(request.getSession().getAttribute(
-				ConfigKeys.LOGGED));
+		boolean isLogged = "1".equals(request.getSession().getAttribute(ConfigKeys.LOGGED));
 		request.setAttribute("logged", isLogged);
 
 		if (isLogged) {
-			UserSession userSession = SessionFacade.getUserSession(request
-					.getSession().getId());
+			UserSession userSession = SessionFacade.getUserSession(request.getSession().getId());
 			request.setAttribute("userSession", userSession);
 		}
 
